@@ -1,0 +1,83 @@
+.detail-main {
+  margin: 50px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  gap: 20px;
+  width: min-content;
+}
+
+.gallery__addition {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  max-height: 140px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+.main-photo {
+  width: 750px;
+  margin-top: 15px;
+}
+.add-photo {
+  width: 220px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr min-content;
+  gap: 15px;
+}
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 450px;
+  margin-bottom: 50px;
+  overflow-y: auto;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  min-height: 100px;
+  padding: 10px;
+  background: rgba(87, 170, 50, 0.13);
+}
+
+.decor::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./images/icons8-звезда-48.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.description {
+  grid-row: 2;
+  margin-bottom: 20px;
+}
+.gallery__addition {
+  margin-bottom: 20px;
+}
+@media (width<1650px) {
+  .main-photo {
+    width: 550px;
+  }
+}
+@media (width<1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery {
+    width: 100%;
+  }
+  .main-photo {
+    width: 100%;
+  }
+}
